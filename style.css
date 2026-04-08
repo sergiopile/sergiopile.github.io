@@ -398,6 +398,52 @@ img { max-width: 100%; }
     font-weight: 500;
 }
 
+/* === Screenshots === */
+.case-screenshots {
+    margin: 16px 0 20px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.screenshot-item {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--gray-5);
+    background: var(--dark);
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: top left;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.screenshot-item:hover img {
+    transform: scale(1.05);
+}
+
+.screenshot-item span {
+    display: block;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    color: var(--gray-3);
+    background: var(--dark-2);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* === Stack === */
 .stack-grid {
     display: grid;
